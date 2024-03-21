@@ -1,18 +1,7 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Tablet Purchase Finance Calculator
 
-## Folder Structure
+You are assigned the task of developing a program to help customers select a tablet and provide them with information about instalment plans. The program will present customers with three tablet options of different specifications, along with their prices. 
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Customers will make a choice by selecting the corresponding letter. Your program should validate the choice, calculate the monthly instalment, and display the credit price after interest. Interest charged at 85.4%.
