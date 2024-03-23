@@ -52,5 +52,21 @@ public class AbbreviationGenerator {
         JLabel abbreviationLabel = new JLabel("Abbreviation: ");
         abbreviationLabel.setBounds(10, 140, 300, 25);
         panel.add(abbreviationLabel);
+
+        generateButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Get the text from each text field
+                String firstWord = firstWordText.getText();
+                String secondWord = secondWordText.getText();
+                String thirdWord = thirdWordText.getText();
+
+                // Generate the abbreviation by taking the first character of each word
+                String abbreviation = (firstWord.charAt(0) + "" + secondWord.charAt(0) + "" + thirdWord.charAt(0))
+                        .toUpperCase();
+                // Display the abbreviation on the GUI
+                abbreviationLabel.setText("Abbreviation: " + abbreviation);
+            }
+        });
     }
+
 }
