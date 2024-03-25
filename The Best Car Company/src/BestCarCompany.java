@@ -1,4 +1,3 @@
-
 public class BestCarCompany {
 
     private static final String[] names = { "James Boyd", "Mpho Baloyi", "Timothy Ryan", "Daniel Ramogotshi",
@@ -12,6 +11,10 @@ public class BestCarCompany {
         for (int i = 0; i < totalSales.length; i++) {
             commission[i] = calculateCommission(totalSales[i]);
         }
+
+        displayData();
+        sortData();
+        displayData();
 
     }
 
@@ -38,4 +41,25 @@ public class BestCarCompany {
 
         System.out.println("Total Sales: " + totalSalesSum + ", Total Commission: " + totalCommissionSum);
     }
+
+    public static void sortData() {
+        for (int i = 0; i < totalSales.length - 1; i++) {
+            for (int j = 0; j < totalSales.length - i - 1; j++) {
+                if (totalSales[j] > totalSales[j + 1]) {
+                    double tempSales = totalSales[j];
+                    totalSales[j] = totalSales[j + 1];
+                    totalSales[j + 1] = tempSales;
+
+                    String tempName = names[j];
+                    names[j] = names[j + 1];
+                    names[j + 1] = tempName;
+
+                    double tempCommission = commission[j];
+                    commission[j] = commission[j + 1];
+                    commission[j + 1] = tempCommission;
+                }
+            }
+        }
+    }
+
 }
