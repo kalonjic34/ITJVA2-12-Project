@@ -24,4 +24,21 @@ public class BestCarCompany {
             return totalSales * 0.09; // 9% of sales
         }
     }
+
+    // Method to display the data
+    public static void displayData() {
+        double totalSalesSum = 0;
+        double totalCommissionSum = 0;
+
+        // Print each employee's name, total sales, and commission
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(
+                    "Name: " + names[i] + ", Total Sales: " + totalSales[i] + ", Commission: " + commission[i]);
+            totalSalesSum += totalSales[i];
+            totalCommissionSum += commission[i];
+        }
+
+        // Print the total sales and total commission
+        System.out.println("Total Sales: " + totalSalesSum + ", Total Commission: " + totalCommissionSum);
+    }
 }
