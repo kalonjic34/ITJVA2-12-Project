@@ -25,12 +25,10 @@ public class BestCarCompany {
         }
     }
 
-    // Method to display the data
     public static void displayData() {
         double totalSalesSum = 0;
         double totalCommissionSum = 0;
 
-        // Print each employee's name, total sales, and commission
         for (int i = 0; i < names.length; i++) {
             System.out.println(
                     "Name: " + names[i] + ", Total Sales: " + totalSales[i] + ", Commission: " + commission[i]);
@@ -38,7 +36,6 @@ public class BestCarCompany {
             totalCommissionSum += commission[i];
         }
 
-        // Print the total sales and total commission
         System.out.println("Total Sales: " + totalSalesSum + ", Total Commission: " + totalCommissionSum);
     }
 }
